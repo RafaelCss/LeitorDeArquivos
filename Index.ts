@@ -32,10 +32,9 @@ async function lerArquivosXls(dir: string) {
   }
 
   const textoDoArray = array.toString();
+  const limpezaTexto = textoDoArray.replace(" ","Um" )
 
-  console.log(textoDoArray)
-
-  const teste = fs.writeFile("teste.xls", textoDoArray, function (err) {
+  const teste = fs.writeFile("teste.xls", limpezaTexto, function (err) {
     if (!err) {
       console.log("Arquivo salvo com sucesso!");
     } else {
